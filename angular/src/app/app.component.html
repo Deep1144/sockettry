@@ -1,0 +1,21 @@
+<div class="m-5">
+
+  <h2> Online 
+    <span class="badge badge-pill badge-light" style="color: green;"> 
+      {{ userOnline }}
+    </span>
+  </h2>
+
+
+  <input type="text" class="form-control w-25" [(ngModel)]="message" placeholder="Enter message">
+  <button class="btn btn-light mt-2" (click)="sendMessage()">
+    Send Message
+  </button>
+
+
+  <br><br><br><br>
+  <h3>Messages</h3>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of msgList">{{ item }}</li>
+  </ul>
+</div>
